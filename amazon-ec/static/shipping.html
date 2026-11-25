@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配送・返品管理 - ALI BABA SHOP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="auth.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <a class="brand" href="index.html">🛒 ALI BABA SHOP</a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">商品一覧</a>
+            <a href="cart.html" class="nav-link">🛒 カート</a>
+            <a href="orders.html" class="nav-link">📦 注文履歴</a>
+            <a href="admin.html" class="nav-link nav-admin">⚙️ 商品管理</a>
+            <a href="shipping.html" class="nav-link nav-admin active">🚚 配送・返品管理</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn btn-login">ログイン</a>
+            <a href="register.html" class="btn btn-register">会員登録</a>
+        </div>
+    </header>
+    <main class="container container-wide">
+        <h1>配送・返品管理</h1>
+        <p id="message" role="status">管理者権限を確認しています。</p>
+        <section id="panel" class="admin-panel" hidden>
+            <button id="reload" type="button" class="btn-sm btn-ghost">一覧を更新</button>
+            <div class="table-scroll">
+                <table class="admin-table">
+                    <thead>
+                        <tr><th class="num">注文ID</th><th>商品</th><th class="num">数量</th><th>注文日時</th><th>決済</th><th>配送</th><th>操作</th></tr>
+                    </thead>
+                    <tbody id="shipments"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="shipping.js"></script>
+</body>
+</html>
